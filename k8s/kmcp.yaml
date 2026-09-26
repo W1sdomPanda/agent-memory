@@ -1,0 +1,23 @@
+name: qdrant-mcp
+framework: mcp-go
+version: 0.4.0
+description: MCP tools for a Qdrant collection, embedding through an OpenAI-compatible endpoint
+author: Denys Vasyliev
+email: den.vasyliev@gmail.com
+secrets:
+    local:
+        enabled: false
+        provider: env
+        file: .env.local
+    production:
+        enabled: false
+        provider: kubernetes
+        secretName: qdrant-mcp-secrets-production
+        namespace: kagent
+    staging:
+        enabled: false
+        provider: kubernetes
+        secretName: qdrant-mcp-secrets-staging
+        namespace: kagent
+created_at: 2026-09-13T19:30:34.971519+01:00
+updated_at: 2026-09-13T19:30:36.708435+01:00
